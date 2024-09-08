@@ -1,9 +1,9 @@
 const express = require("express")
-const dataRoute = require("./routes/dataRoute.js")
-const connectDB = require('./DB/connectDB.js'); // Import the DB connection function
+const dataRoute = require("./src/routes/dataRoute.js")
+const connectDB = require('./src/DB/connectDB.js'); // Import the DB connection function
 require("dotenv").config();
 
-require("./schedule.js");
+require("./src/schedule.js");
 // Connect to MongoDB
 connectDB();
 
