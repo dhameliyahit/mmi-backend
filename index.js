@@ -8,12 +8,12 @@ require("./src/schedule.js");
 // Connect to MongoDB
 connectDB();
 
-app.use(cors());
 // express intance
 const app = express();
 
 // middle ware used
 app.use(express.json());
+app.use(cors());
 
 // Home route
 app.get("/",(req,res)=>{
