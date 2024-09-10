@@ -1,12 +1,14 @@
 const express = require("express")
 const dataRoute = require("./src/routes/dataRoute.js")
 const connectDB = require('./src/DB/connectDB.js'); // Import the DB connection function
+const cors = require("cors");
 require("dotenv").config();
 
 require("./src/schedule.js");
 // Connect to MongoDB
 connectDB();
 
+app.use(cors());
 // express intance
 const app = express();
 
